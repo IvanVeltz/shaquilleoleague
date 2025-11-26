@@ -8,7 +8,7 @@
 <section class="relative w-full h-[500px] bg-cover bg-center hero-banner">
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex justify-around flex-col md:flex-row z-10">
-        
+
         <!-- Texte avec overlay derrière -->
         <div class="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left p-4 sm:p-6 z-10">
             <div class="bg-black/60 p-4 rounded-lg inline-block">
@@ -25,11 +25,11 @@
         <div class="w-full md:w-1/2 flex items-end justify-center md:items-center md:justify-center p-4">
             <div class="grid grid-cols-7 grid-rows-4 gap-2 w-full h-auto items-center md:h-full md:pl-20">
                 {% for logo in teamLogos %}
-                    <a href="">
+                <a href="">
 
-                        <img src="{{ asset(logo) }}" alt="Team logo"
+                    <img src="{{ asset(logo) }}" alt="Team logo"
                         class="w-full max-h-[30px] sm:max-h-10 md:max-h-[60px] object-contain hover:scale-110 transition duration-300">
-                    </a>
+                </a>
                 {% endfor %}
             </div>
         </div>
@@ -37,5 +37,74 @@
     </div>
 
 </section>
+
+<section class="bg-[#0C101B] py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-white text-center mb-12">Nos Compétitions</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <!-- O'League -->
+            <div class="group">
+                <a href=""
+                    class="block mx-10 md:mx-0 bg-gray-900 hover:bg-yellow-400 transition rounded-lg p-8 text-center">
+                    <h3 class="text-white font-bold text-xl mb-2 group-hover:text-black mb-4">O'League</h3>
+
+                    <div class="text-center">
+                        <span
+                            class="inline-block md:inline bg-gray-800 text-gray-200 px-2 py-1 rounded text-xs mb-2 md:mb-0">2
+                            Conférences</span>
+                        <span
+                            class="inline-block md:inline bg-gray-800 text-gray-200 px-2 py-1 rounded text-xs mb-2 md:mb-0">13
+                            Journées</span>
+                        <span class="inline-block md:inline bg-gray-800 text-gray-200 px-2 py-1 rounded text-xs">1
+                            Vainqueur</span>
+                    </div>
+
+                </a>
+            </div>
+
+
+            <!-- O'Cup -->
+            <div class="group">
+                <a href=""
+                    class="block mx-10 md:mx-0 bg-gray-900 hover:bg-yellow-400 transition rounded-lg p-8 text-center">
+                    <h3 class="text-xl font-bold text-white group-hover:text-black mb-4">O'Cup</h3>
+                    <div class="text-center">
+                        <span
+                            class="inline-block md:inline bg-gray-800 text-gray-200 px-2 py-1 rounded text-xs mb-2 md:mb-0">1
+                            Classement</span>
+                        <span
+                            class="inline-block md:inline bg-gray-800 text-gray-200 px-2 py-1 rounded text-xs mb-2 md:mb-0">6
+                            Cuts</span>
+                        <span class="inline-block md:inline bg-gray-800 text-gray-200 px-2 py-1 rounded text-xs">Final
+                            4</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- O'Solo -->
+            <div class="group">
+                <a href=""
+                    class="block mx-10 md:mx-0 bg-gray-900 hover:bg-yellow-500 transition rounded-lg p-8 text-center">
+                    <h3 class="text-xl font-bold text-white group-hover:text-black mb-4">O'Solo</h3>
+                    <div class="text-center">
+                        <span
+                            class="inline-block md:inline bg-gray-800 text-gray-200 px-2 py-1 rounded text-xs mb-2 md:mb-0">7
+                            Ligues</span>
+                        <span
+                            class="inline-block md:inline bg-gray-800 text-gray-200 px-2 py-1 rounded text-xs mb-2 md:mb-0">8
+                            Périodes</span>
+                        <span class="inline-block md:inline bg-gray-800 text-gray-200 px-2 py-1 rounded text-xs">1
+                            MVP</span>
+                    </div>
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
 
 {% endblock %}
