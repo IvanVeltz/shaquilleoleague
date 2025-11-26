@@ -1,7 +1,41 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Accueil - Shaquille O'League{% endblock %}
 
 {% block body %}
+
+
+<section class="relative w-full h-[500px] bg-cover bg-center hero-banner">
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex justify-around flex-col md:flex-row z-10">
+        
+        <!-- Texte avec overlay derrière -->
+        <div class="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left p-4 sm:p-6 z-10">
+            <div class="bg-black/60 p-4 rounded-lg inline-block">
+                <h1 class="text-3xl sm:text-4xl sm:text-center md:text-5xl font-bold text-white uppercase mb-4">
+                    Bienvenue dans la Shaquille O'League
+                </h1>
+                <p class="text-white text-base sm:text-lg sm:text-center md:text-xl font-bold">
+                    Découvrez les équipes, les classements et toutes les compétitions de notre ligue.
+                </p>
+            </div>
+        </div>
+
+        <!-- Logos -->
+        <div class="w-full md:w-1/2 flex items-end justify-center md:items-center md:justify-center p-4">
+            <div class="grid grid-cols-7 grid-rows-4 gap-2 w-full h-auto items-center md:h-full md:pl-20">
+                {% for logo in teamLogos %}
+                    <a href="">
+
+                        <img src="{{ asset(logo) }}" alt="Team logo"
+                        class="w-full max-h-[30px] sm:max-h-10 md:max-h-[60px] object-contain hover:scale-110 transition duration-300">
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+
+</section>
 
 {% endblock %}
