@@ -25,11 +25,11 @@
         <div class="w-full md:w-1/2 flex items-end justify-center md:items-center md:justify-center p-4">
             <div class="grid grid-cols-7 grid-rows-4 gap-2 w-full h-auto items-center md:h-full md:pl-20">
                 {% for logo in teamLogos %}
-                <a href="">
+                
 
                     <img src="{{ asset(logo) }}" alt="Team logo"
-                        class="w-full max-h-[30px] sm:max-h-10 md:max-h-[60px] object-contain hover:scale-110 transition duration-300">
-                </a>
+                        class="w-full max-h-[30px] sm:max-h-10 md:max-h-[60px] object-contain transition duration-300">
+                
                 {% endfor %}
             </div>
         </div>
@@ -42,67 +42,108 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl font-bold text-white text-center mb-12">Nos Compétitions</h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
 
             <!-- O'League -->
             <div class="group">
-                <a href=""
-                    class="block mx-10 md:mx-0 bg-gray-900 hover:bg-yellow-400 transition rounded-lg p-8 text-center">
-                    <h3 class="text-white font-bold text-xl mb-2 group-hover:text-black mb-4">O'League</h3>
+                <a href="" class="mx-4 sm:mx-8 md:mx-0 bg-gray-900 rounded-lg p-6 sm:p-8
+                  transition-all  md:shadow-none  md:hover:shadow-[0_0_20px_5px_rgba(50,255,50,0.5)] hover:scale-105
+                   flex flex-col h-full text-left">
 
-                    <div class="text-center">
-                        <span
-                            class="inline-block md:inline bg-gray-800 text-gray-200 px-2 py-1 rounded text-xs mb-2 md:mb-0">2
-                            Conférences</span>
-                        <span
-                            class="inline-block md:inline bg-gray-800 text-gray-200 px-2 py-1 rounded text-xs mb-2 md:mb-0">13
-                            Journées</span>
-                        <span class="inline-block md:inline bg-gray-800 text-gray-200 px-2 py-1 rounded text-xs">1
-                            Vainqueur</span>
-                    </div>
+                    <!-- Icône -->
+                    <i
+                        class="fa-solid fa-ranking-star text-lime-400  group-hover:text-lime-400 text-2xl sm:text-3xl mb-4 block !text-left"></i>
+
+                    <!-- Titre -->
+                    <h2 class="text-xl sm:text-2xl font-bold text-lime-400  group-hover:text-lime-400 mb-2">
+                        O'League
+                    </h2>
+
+                    <!-- Description -->
+                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-6">
+                        La compétition reine regroupant toutes les équipes. <br class="hidden sm:block">
+                        2 conférences, 13 journées, des playoffs intenses… <br class="hidden sm:block">
+                        Seule la meilleure équipe soulèvera le titre ultime.
+                    </p>
+
+                    <!-- Bouton -->
+                    <span class="mt-auto w-fit whitespace-nowrap px-4 py-2 rounded bg-lime-400  
+                         text-black  text-sm font-semibold transition-all 
+                         group-hover:bg-lime-400 group-hover:text-black">
+                        Voir la compétition →
+                    </span>
 
                 </a>
             </div>
 
-
             <!-- O'Cup -->
             <div class="group">
-                <a href=""
-                    class="block mx-10 md:mx-0 bg-gray-900 hover:bg-yellow-400 transition rounded-lg p-8 text-center">
-                    <h3 class="text-xl font-bold text-white group-hover:text-black mb-4">O'Cup</h3>
-                    <div class="text-center">
-                        <span
-                            class="inline-block md:inline bg-gray-800 text-gray-200 px-2 py-1 rounded text-xs mb-2 md:mb-0">1
-                            Classement</span>
-                        <span
-                            class="inline-block md:inline bg-gray-800 text-gray-200 px-2 py-1 rounded text-xs mb-2 md:mb-0">6
-                            Cuts</span>
-                        <span class="inline-block md:inline bg-gray-800 text-gray-200 px-2 py-1 rounded text-xs">Final
-                            4</span>
-                    </div>
+                <a href="" class="mx-4 sm:mx-8 md:mx-0 bg-gray-900 rounded-lg p-6 sm:p-8
+                  transition-all  md:shadow-none md:hover:shadow-[0_0_20px_5px_rgba(0,255,255,0.5)] hover:scale-105
+                  flex flex-col h-full text-left">
+
+                    <!-- Icône -->
+                    <i
+                        class="fa-solid fa-trophy text-cyan-500  group-hover:text-cyan-500 text-2xl sm:text-3xl mb-4 block"></i>
+
+                    <!-- Titre -->
+                    <h2 class="text-xl sm:text-2xl font-bold text-cyan-500  group-hover:text-cyan-500 mb-2">
+                        O'Cup
+                    </h2>
+
+                    <!-- Description -->
+                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-6">
+                        Un format couperet, rythmé et impitoyable. <br class="hidden sm:block"> <br class="hidden sm:block">
+                        1 classement unique, 6 cuts éliminatoires et un Final 4 explosif… <br class="hidden sm:block">
+                        Ici, seule la régularité mène à la gloire.
+                    </p>
+
+                    <!-- Bouton -->
+                    <span class="mt-auto w-fit whitespace-nowrap px-4 py-2 rounded bg-cyan-500 
+                         text-black  text-sm font-semibold transition-all 
+                         group-hover:bg-cyan-500 group-hover:text-black">
+                        Voir la compétition →
+                    </span>
+
                 </a>
             </div>
 
             <!-- O'Solo -->
             <div class="group">
-                <a href=""
-                    class="block mx-10 md:mx-0 bg-gray-900 hover:bg-yellow-500 transition rounded-lg p-8 text-center">
-                    <h3 class="text-xl font-bold text-white group-hover:text-black mb-4">O'Solo</h3>
-                    <div class="text-center">
-                        <span
-                            class="inline-block md:inline bg-gray-800 text-gray-200 px-2 py-1 rounded text-xs mb-2 md:mb-0">7
-                            Ligues</span>
-                        <span
-                            class="inline-block md:inline bg-gray-800 text-gray-200 px-2 py-1 rounded text-xs mb-2 md:mb-0">8
-                            Périodes</span>
-                        <span class="inline-block md:inline bg-gray-800 text-gray-200 px-2 py-1 rounded text-xs">1
-                            MVP</span>
-                    </div>
+                <a href="" class="mx-4 sm:mx-8 md:mx-0 bg-gray-900 rounded-lg p-6 sm:p-8
+                  transition-all shadow-lg hover:shadow-[0_0_20px_5px_rgba(234,179,8,0.5)] hover:scale-105
+                  flex flex-col h-full text-left">
+
+                    <!-- Icône -->
+                    <i
+                        class="fa-solid fa-user text-yellow-400 group-hover:text-yellow-400 text-2xl sm:text-3xl mb-4 block"></i>
+
+                    <!-- Titre -->
+                    <h2 class="text-xl sm:text-2xl font-bold text-yellow-400 group-hover:text-yellow-400 mb-2">
+                        O'Solo
+                    </h2>
+
+                    <!-- Description -->
+                    <p class="text-gray-300 text-justify md:text-start text-sm sm:text-base leading-relaxed mb-6">
+                        La compétition individuelle ultime. <br class="hidden sm:block"> <br class="hidden sm:block">
+                        7 ligues, 8 périodes, montées & descentes, et une bataille pour le top 16. <br
+                            class="hidden sm:block">
+                        Un seul joueur ira au bout et deviendra champion.
+                    </p>
+
+                    <!-- Bouton -->
+                    <span class="mt-auto w-fit whitespace-nowrap px-4 py-2 rounded bg-yellow-400 
+                         text-black text-sm font-semibold transition-all 
+                         group-hover:bg-yellow-400 group-hover:text-black">
+                        Voir la compétition →
+                    </span>
+
                 </a>
             </div>
 
-
         </div>
+
+
     </div>
 </section>
 
