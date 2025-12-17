@@ -24,12 +24,12 @@
         <!-- Logos -->
         <div class="w-full md:w-1/2 flex items-end justify-center md:items-center md:justify-center p-4">
             <div class="grid grid-cols-7 grid-rows-4 gap-2 w-full h-auto items-center md:h-full md:pl-20">
-                {% for logo in teamLogos %}
-                
+                {% for team in teams %}
 
-                    <img src="{{ asset(logo) }}" alt="Team logo"
-                        class="w-full max-h-[30px] sm:max-h-10 md:max-h-[60px] object-contain transition duration-300">
-                
+
+                <img src="{{ asset('images/logos/' ~ team.urlLogo) }}" alt="Team logo"
+                    class="w-full max-h-[30px] sm:max-h-10 md:max-h-[60px] object-contain transition duration-300">
+
                 {% endfor %}
             </div>
         </div>
@@ -47,12 +47,12 @@
             <!-- O'League -->
             <div class="group">
                 <a href="" class="mx-4 sm:mx-8 md:mx-0 bg-gray-900 rounded-lg p-6 sm:p-8
-                  transition-all  md:shadow-none  md:hover:shadow-[0_0_20px_5px_rgba(50,255,50,0.5)] hover:scale-105
+                  transition-all md:shadow-none md:hover:shadow-[0_0_20px_5px_rgba(50,255,50,0.5)] hover:scale-105
                    flex flex-col h-full text-left">
 
                     <!-- Icône -->
                     <i
-                        class="fa-solid fa-ranking-star text-lime-400  group-hover:text-lime-400 text-2xl sm:text-3xl mb-4 block"></i>
+                        class="fa-solid fa-ranking-star text-lime-400  group-hover:text-lime-400 text-2xl sm:text-3xl mb-4"></i>
 
                     <!-- Titre -->
                     <h2 class="text-xl sm:text-2xl font-bold text-lime-400  group-hover:text-lime-400 mb-2">
@@ -93,7 +93,8 @@
 
                     <!-- Description -->
                     <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-6">
-                        Un format couperet, rythmé et impitoyable. <br class="hidden sm:block"> <br class="hidden sm:block">
+                        Un format couperet, rythmé et impitoyable. <br class="hidden sm:block"> <br
+                            class="hidden sm:block">
                         1 classement unique, 6 cuts éliminatoires et un Final 4 explosif… <br class="hidden sm:block">
                         Ici, seule la régularité mène à la gloire.
                     </p>
@@ -143,6 +144,31 @@
 
         </div>
 
+
+    </div>
+</section>
+
+<section class="bg-[#F3F4F6] py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">
+            Nos Teams
+        </h2>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-6 p-6">
+            {% for team in teams %}
+            <a href="" class="bg-gray-900 rounded-xl p-4 flex flex-col items-center justify-center
+                  transition-all shadow-lg hover:shadow-[0_0_20px_5px_rgba(0,255,0,0.4)]
+                  hover:scale-105">
+
+                <img src="{{ asset('images/logos/' ~ team.urlLogo) }}" alt="{{ team.name }}" class="w-16 h-16 object-contain mb-3">
+
+                <h2 class="text-center text-white text-sm font-semibold">
+                    {{ team.name }}
+                </h2>
+            </a>
+            {% endfor %}
+        </div>
 
     </div>
 </section>
