@@ -68,6 +68,9 @@ class Team
     #[ORM\OneToMany(targetEntity: TeamNightStats::class, mappedBy: 'team', orphanRemoval: true)]
     private Collection $teamNightStats;
 
+    #[ORM\Column(length: 255)]
+    private ?string $urlTTFL = null;
+
     public function __construct()
     {
         $this->homeTeam = new ArrayCollection();
@@ -312,6 +315,18 @@ class Team
                 $teamNightStat->setTeam(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getUrlTTFL(): ?string
+    {
+        return $this->urlTTFL;
+    }
+
+    public function setUrlTTFL(string $urlTTFL): static
+    {
+        $this->urlTTFL = $urlTTFL;
 
         return $this;
     }

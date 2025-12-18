@@ -16,9 +16,6 @@ class Matchup
     #[ORM\Column]
     private ?int $week = null;
 
-    #[ORM\Column]
-    private ?int $game = null;
-
     #[ORM\ManyToOne(inversedBy: 'homeTeam')]
     #[ORM\JoinColumn(nullable: false)]
     private ?Team $teamHome = null;
@@ -47,19 +44,6 @@ class Matchup
 
         return $this;
     }
-
-    public function getGame(): ?int
-    {
-        return $this->game;
-    }
-
-    public function setGame(int $game): static
-    {
-        $this->game = $game;
-
-        return $this;
-    }
-
 
     public function getTeamHome(): ?Team
     {
